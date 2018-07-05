@@ -1,6 +1,6 @@
 FROM java:8
 
-MAINTAINER wbchn wbin.chn@gmail.com
+MAINTAINER Roman Atachiants kelindar@gmail.com
 
 RUN apt-get update && \
     apt-get install -y g++ mysql-client make
@@ -11,7 +11,7 @@ RUN unzip gradle-2.4-bin.zip
 ENV PATH /gradle-2.4-bin/bin:$PATH
 
 # wget airpal, det dir: airpal-master
-RUN wget https://github.com/airbnb/airpal/archive/master.zip -O airpal.zip
+RUN wget https://github.com/kelindar/airpal/archive/master.zip -O airpal.zip
 RUN unzip airpal.zip -d /
 
 ADD run.sh /run.sh
